@@ -14,24 +14,44 @@
 # #         old_cards.append(i)
 # #
 # # print(old_cards)
+#
+# films = ["Крепкий орешек", "Назад в будущее", "Таксист",
+#     "Леон", "Богемская рапсодия", "Город грехов",
+#     "Мементо", "Отступники", "Деревня"]
+#
+# name = int(input("Сколько фильмов хотите добавить? "))
+#
+# new_films = []
+#
+# for i in range(name):
+#     print("Введите название фильма: ", end='')
+#     film = input()
+#     if film in films:
+#         new_films.append(film)
+#     else:
+#         print("Ошибка: фильма", film, "у нас нет.")
+#
+# print("Ваш список любимых фильмов: ", end=' ')
+# for i in new_films:
+#     print(i, end=", ")
 
-films = ["Крепкий орешек", "Назад в будущее", "Таксист",
-    "Леон", "Богемская рапсодия", "Город грехов",
-    "Мементо", "Отступники", "Деревня"]
+# num_list_1 = [1, 4, -3, 0, 10]
+# num_list = []
+#
+# number = int(input("Сдвиг: "))
+# length = len(num_list_1)
+#
+# number %= length
+#
+# result = num_list_1[-number:] + num_list_1[:number-]
+#
+# print(result)
 
-name = int(input("Сколько фильмов хотите добавить? "))
+word = input("Введите слово: ")
 
-new_films = []
+if word == word[::-1]:
+    print("Слово является палиндромом")
+else:
+    print("Слово не является палиндромом")
 
-for i in range(name):
-    print("Введите название фильма: ", end='')
-    film = input()
-    if film in films:
-        new_films.append(film)
-    else:
-        print("Ошибка: фильма", film, "у нас нет.")
-
-print("Ваш список любимых фильмов: ", end=' ')
-for i in new_films:
-    print(i, end=", ")
-
+print(word[:: - 1])
