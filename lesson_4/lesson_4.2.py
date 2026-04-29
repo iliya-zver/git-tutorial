@@ -7,10 +7,6 @@ def is_palindrome(num_list):
     else:
         return  False
 
-
-
-
-
 nums = [1, 2, 3, 4, 5]
 new_nums =[]
 answer = []
@@ -26,4 +22,6 @@ for i_nums in range(0, len(nums)):
     new_nums = []
 
 
-print('b',new_nums)
+print('Исходный список: ',nums)
+print("Нужно чисел для палиндрома: ", len(answer))
+print("Список этих чисел: ", answer)
