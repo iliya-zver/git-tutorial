@@ -18,9 +18,19 @@
 # print("Сумма цен за каждый год: ", sum(price_now), sum(prices_first), sum(prices_second))
 
 
-num_1 = int(input("Левая граница: "))
-num_2 = int(input("Правая граница: "))
+# num_1 = int(input("Левая граница: "))
+# num_2 = int(input("Правая граница: "))
+#
+# lis_1 = [number ** 3 for number in range(num_1, num_2 + 1)]
+#
+# print(f"Список кубов чисел в диапазоне от {num_1} до {num_2}:", lis_1 )
 
-lis_1 = [number ** 3 for number in range(num_1, num_2 + 1)]
 
-print(f"Список кубов чисел в диапазоне от {num_1} до {num_2}:", lis_1 )
+word = input("Введите строку: ")
+sym = input("Введите дополнительный символ: ")
+
+word_sym = [sym * 2 for sym in word]
+word_sym_1 = [sym_2 + sym for sym_2 in word_sym]
+
+print(word_sym)
+print(word_sym_1)
