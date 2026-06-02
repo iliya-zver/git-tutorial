@@ -23,5 +23,17 @@
 #
 # print(new_tuple_3)
 # print(nul)
+import math
 
+def side(radios, h):
+    si = 2 * math.pi * radios * h
+    s = math.pi * radios ** 2
+    full = si + 2 * s
+    return round(si, 2),round(full, 2)
 
+h = float(input())
+r = float(input())
+
+new = side(h,r)
+
+print(new)
