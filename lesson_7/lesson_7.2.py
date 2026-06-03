@@ -23,17 +23,52 @@
 #
 # print(new_tuple_3)
 # print(nul)
-import math
+# import math
+#
+# def side(radios, h):
+#     si = 2 * math.pi * radios * h
+#     s = math.pi * radios ** 2
+#     full = si + 2 * s
+#     return round(si, 2),round(full, 2)
+#
+# h = float(input())
+# r = float(input())
+#
+# new = side(h,r)
+#
+# print(new)
 
-def side(radios, h):
-    si = 2 * math.pi * radios * h
-    s = math.pi * radios ** 2
-    full = si + 2 * s
-    return round(si, 2),round(full, 2)
+# import random
+#
+# def change(nums):
+#     index = random.randint(0, 5)
+#     value = random.randint(100, 1000)
+#     nums[index] = value
+#     return nums, value
+#
+# my_nums = 1, 2, 3, 4, 5
+#
+# new_nums, rand_val = change(my_nums)
+# print(new_nums, rand_val)
+# new_nums = change(new_nums)
+# rand_val += change(new_nums)
+# print(new_nums, rand_val)
 
-h = float(input())
-r = float(input())
+import random
 
-new = side(h,r)
 
-print(new)
+def change(nums):
+    index = random.randint(0, 5) % len(nums)
+    value = random.randint(100, 1000)
+    nums = list(nums)
+    nums[index] = value
+    return tuple(nums), value
+
+
+my_nums = 1, 2, 3, 4, 5
+
+new_nums, rand_val = change(my_nums)
+print(new_nums, rand_val)
+new_nums_2, rand_val_2 = change(new_nums)
+rand_val += rand_val_2
+print(new_nums_2, rand_val)
