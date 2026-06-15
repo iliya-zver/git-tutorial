@@ -4,7 +4,8 @@ def print_tax_document(tax, *args, **kwargs):
         price_sum = price_sum + i_price * tax / 100
     print("Сумма цен с учетом налога: ", price_sum)
 
-    for
+    for i_info, i_value in kwargs.items():
+        print("{}: {}".format(i_info,i_value))
 
 
 
