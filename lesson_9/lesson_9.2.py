@@ -29,4 +29,13 @@ if os.path.exists(absolute_path):
     size_in_mb = size_in_bate / 1024 / 1024
     print(f"Размер файла: {size_in_mb:.2f} МБ")
 
+filename = os.path.basename(absolute_path)
+print(filename)
+folder = os.path.dirname(absolute_path)
+print(folder)
+
+name, extension = os.path.splitext(absolute_path)
+print(f"Путь без расширения: {name}")
+print(f"Расширение: {extension}")
+
 
